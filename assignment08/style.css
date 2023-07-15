@@ -1,0 +1,302 @@
+/* Resets */
+body, p {
+	margin: 0;
+}
+
+h1, h2 {
+	margin: 0;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+img {
+	vertical-align: top;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+/* Typography */
+:root {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 62.5%; /* 10% */
+}
+
+/* Layouts */
+.l_wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 200px;
+}
+
+/* Commons */
+.button {
+	color: #76b4fc;
+	text-align: center;
+	letter-spacing: 1px;
+	background-color: #fff;
+	display: block;
+	padding: 5px 0;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.button_gray {
+	color: #fff;
+	background-color: #ddd;
+}
+
+.ratings {
+    background-image: url(images/star.png);
+    background-size: 100px 40px;
+    width: 100px;
+    height: 20px;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.ratings::before {
+    content: ' ';
+    background-image: inherit;
+    background-size: inherit;
+    background-position: left bottom;
+    display: block;
+    width: 0;
+    height: 20px;
+}
+
+.ratings[data-rate="1"]::before { width: 20%; }
+.ratings[data-rate="2"]::before { width: 40%; }
+.ratings[data-rate="3"]::before { width: 60%; }
+.ratings[data-rate="4"]::before { width: 80%; }
+.ratings[data-rate="5"]::before { width: 100%; }
+
+/* Components */
+.header {
+	background-color: #f9f8f9;
+	background: linear-gradient(to bottom,  rgba(255, 255, 255, 0.898) 0%,rgba(216, 216, 216, 0.866) 100%);
+}
+
+.header-inside {
+	position: relative;
+}
+
+.header-main {
+	padding: 50px 0;
+}
+
+.header-title {
+	color: #fc8b25;
+	font-family: 'Oswald', sans-serif;
+	font-size: 6.4rem;
+}
+
+.header-description {
+	color: #ccc;
+	font-size: 3.2rem;
+	font-weight: bold;
+}
+
+.header-point{
+	margin-left: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin-right: -200px;
+}
+
+.header-nav-lists {
+	display: flex;
+	gap: 3px;
+}
+
+.header-nav-lists a {
+	display: inline-block;
+	color: #888;
+	letter-spacing: 1px;
+	background-color: #eee;
+	border-radius: 10px 10px 0 0;
+	padding: 10px 15px;
+}
+
+.header-nav-lists a:hover {
+	content: ' ';
+	color: olive;
+	background-color: #fff;
+	margin-bottom: -3px;
+	border-width: 3px 3px 0;
+	border-style: solid;
+	position: relative;
+	z-index: 1;
+}
+
+.main {
+	background-color: #dedede;
+}
+
+.main-inside {
+	background-color: #fff;
+	display: flex;
+	gap: 20px;
+	border: 3px solid olive;
+	position: relative;
+	padding: 20px;
+}
+
+.main-sidebar {
+	color: #222;
+	width: 100px;
+	flex-shrink: 0;
+}
+
+.main-sidebar-lists li+li {
+	border-top: 1px solid #ddd;
+}
+
+.main-sidebar-lists li {
+	padding: 5px 0;
+}
+
+.main-sidebar-lists a:hover {
+	color: #fc471e;
+}
+
+.main-contents {
+	flex-grow: 1;
+}
+
+.card {
+	color: #ddd;
+}
+
+.card_wrapper {
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax( 200px, 1fr) );
+	gap: 20px;
+}
+
+.card{
+	background-color: #fff;
+	height: 100%;
+	border: 1px solid;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.card-inside {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.card-cover {
+	overflow: hidden;
+	border-radius: 5px 5px 0 0;
+	position: relative;
+}
+
+.card-cover-src {
+	width: 100%;
+}
+
+.card-cover.badge::after {
+	content: 'FEATURED';
+	color: #fff;
+	background-color: #fc471e;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 2px 10px;
+	margin: 10px;
+}
+
+.card-contents {
+	padding: 15px 10px;
+}
+
+.card-title {
+	color: #fc471e;
+	font-size: 1.4rem;
+	font-weight: bold;
+}
+
+.card-description {
+	color: #888;
+	padding: 10px 0;
+}
+
+.card-contents-meta {
+	height: 50px;
+	background-color: #f4f4f4;
+	padding: 10px;
+	border-top: 1px solid;
+	margin-top: auto;
+}
+
+.card-tag {
+	color: #222;
+	padding-bottom: 15px;
+}
+
+.card-tag span {
+	color: #fc471e;
+}
+
+.tone_gray {
+	filter: grayscale(100%);
+}
+
+.footer {
+	color: #888;
+	font-weight: bold;
+	background-color: #dedede;
+}
+
+.footer-inside {
+	padding: 20px 5px;
+}
+
+/* Media Queries */
+/* Tablet */
+@media ( max-width: 960px ) {
+	.l_wrapper {
+		padding: 0 50px;
+	}
+	.header-point {
+		display: none;
+	}
+	.main-inside{
+		display: block;
+	}
+	.main-sidebar-lists {
+		display: flex;
+		gap: 10px;
+		margin-bottom: 20px;
+	}
+	.main-sidebar-lists li+li {
+		border-top: 0;
+		border-left: 1px solid #ddd;
+		padding-left: 5px;
+	}
+}
+
+@media ( max-width: 410px ) {
+	body {
+		background-color: #dedede;
+	}
+	.header {
+		background-color: transparent;
+		background: 0;
+	}
+	.l_wrapper {
+		width: 310px;
+	}
+}
