@@ -1,0 +1,224 @@
+/* Resets */
+body, p {
+    margin: unset;
+}
+
+h1, h2 {
+    margin: unset;
+    font-size: unset;
+    font-weight: unset;
+}
+
+a {
+    color: unset;
+    text-decoration: unset;
+}
+
+ul {
+    margin: unset;
+    padding: unset;
+    list-style-type: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+/* Typography */
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%; /* 10% */
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+/* Commons */
+.button {
+    display: block;
+    width: fit-content;
+    color: #fff;
+    background-color: #32316f;
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
+.button::after {
+    content: '';
+    background-image: url(images/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: left 2px top 3px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
+
+/* Components */
+body {
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.root {
+    height: 100vh;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.root-inside {
+    height: 100%;
+    background-color: #1b1a5f;
+    display: flex;
+    gap: 20px;
+    border-radius: 20px;
+    border-top: 2px solid #4d92fc;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.root-header {
+    flex-basis: 300px;
+    flex-shrink: 0;
+}
+
+.root-header-inside {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: auto;
+}
+
+.root-header-contents {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.root-header-title {
+    color: #9ce792;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 6.4rem;
+    font-weight: 900;
+}
+
+.root-header-title span {
+    display: block;
+    color: salmon;
+}
+
+.root-header-description {
+    color: #54a2f6;
+    font-size: 2.4rem;
+}
+
+.root-main {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.table {
+    height: 100%;
+    padding-top: 20px;
+    box-sizing: border-box;
+    color: #4785f2;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-header {
+    margin-bottom: 40px;
+    border-bottom: 3px solid;
+    display: flex;
+    align-items: baseline;
+}
+
+.table-header-title {
+    font-size: 3.6rem;
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+.table-contents {
+    margin-bottom: -40px;
+    flex-grow: 1;
+    min-height: 0;
+    overflow: auto;
+}
+
+.table-col {
+    background-color: #181754;
+    border-radius: 20px;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.309);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.table-col:nth-child(even) {
+    background-color: unset;
+    box-shadow: unset;
+}
+
+.table-col-item-1 {
+    font-family: 'Exo 2', sans-serif;
+    text-align: center;
+}
+
+.table-col-item-2 {
+    box-shadow: inset 0 0 20px #fff;
+    border-radius: 10px 50% 50% 10px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.309);
+}
+
+.table-col-item-2 img {
+    width: 100%;
+}
+
+.type_10p { flex-basis: 10%; flex-grow: 0; flex-shrink: 0; }
+.type_20p { flex-basis: 20%; flex-grow: 0; flex-shrink: 0; }
+.type_30p { flex-basis: 30%; flex-grow: 0; flex-shrink: 0; }
+.type_40p { flex-basis: 40%; flex-grow: 0; flex-shrink: 0; }
+.type_50p { flex-basis: 50%; flex-grow: 0; flex-shrink: 0; }
+.type_60p { flex-basis: 60%; flex-grow: 0; flex-shrink: 0; }
+.type_70p { flex-basis: 70%; flex-grow: 0; flex-shrink: 0; }
+.type_80p { flex-basis: 80%; flex-grow: 0; flex-shrink: 0; }
+.type_90p { flex-basis: 90%; flex-grow: 0; flex-shrink: 0; }
+.type_100p { flex-basis: 100%; flex-grow: 0; flex-shrink: 0; }
+
+.color_lightblue { color: #96cfec; }
+.color_salmon { color: #dd7f6b; }
+.color_lightgreen { color: #c0fd9f; }
+
+.primary { font-size: 1.8rem; }
+
+/* Media Queries */
+@media ( max-width: 960px ) {
+    .root-inside {
+        display: block;
+        overflow: auto;
+        padding: 20px;
+    }
+    .root-header {
+        margin-bottom: 80px;
+    }
+    .root-header-title {
+        margin-bottom: 20px;
+    }
+    .root-header-inside {
+        flex-direction: row;
+    }
+}
+
+@media ( max-width: 720px ) {
+    .table-col-item-2 {
+        display: none;
+    }
+}
